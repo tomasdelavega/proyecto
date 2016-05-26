@@ -1,0 +1,100 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.Empleados.VFisios"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/Medical  Student 2.png"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Title="Plantilla de empleados" Height="688" Width="548" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="BlueHeader">
+            <StackPanel Orientation="Horizontal" Margin="-5,-5,-5,-5" Width="500">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF223B84" Offset="1"/>
+                        <GradientStop Color="#FF57A0F4" Offset="0.5"/>
+                        <GradientStop Color="#FF4B94EC" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Margin="10,10,10,10" Text="{Binding}" VerticalAlignment="Center" Foreground="White"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Height="685">
+        <TextBox Height="24" Margin="153,232,44,0" Name="txtNombre" VerticalAlignment="Top" TabIndex="2" />
+        <Label Height="24" Margin="42,232,0,0" Name="lblNombre" VerticalAlignment="Top" HorizontalAlignment="Left" Width="105">Nombre(*)</Label>
+        <Label Height="24" Margin="42,260,0,0" Name="lblApellidos" VerticalAlignment="Top" HorizontalAlignment="Left" Width="105">Apellidos(*)</Label>
+        <TextBox Height="24" Margin="153,260,44,0" Name="txtApellidos" VerticalAlignment="Top" TabIndex="3" />
+        <Label Margin="42,204,0,0" Name="lblDni" Height="24" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105">DNI(*)</Label>
+        <TextBox Margin="153,204,162,0" Name="txtDni" Height="24" VerticalAlignment="Top" TabIndex="1" />
+        <Label Height="24" HorizontalAlignment="Left" Margin="42,288,0,0" Name="lblTfno1" VerticalAlignment="Top" Width="105">Teléfono</Label>
+        <TextBox Height="24" Margin="153,288,0,0" Name="txtTfno" VerticalAlignment="Top" TabIndex="4" HorizontalAlignment="Left" Width="120" />
+        <Label Height="24" Margin="0,288,171,0" Name="lblMovil" VerticalAlignment="Top" HorizontalAlignment="Right" Width="51">Movil</Label>
+        <TextBox Height="24
+                 " Margin="0,288,44,0" Name="txtMovil" VerticalAlignment="Top" HorizontalAlignment="Right" Width="123" TabIndex="5" />
+        <TextBox Height="24" Margin="153,0,44,317" Name="txtEmail" VerticalAlignment="Bottom" TabIndex="7" />
+        <Label Height="24" Margin="42,0,0,317" Name="lblEmail" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="105">eMail</Label>
+        <Button Height="30" Margin="153,0,0,115" Name="btnGuardar" VerticalAlignment="Bottom" Click="btnGuardar_Click" HorizontalAlignment="Left" Width="82" TabIndex="15">Registrar</Button><Button Height="23" HorizontalAlignment="Right" Margin="0,0,12,45" Name="btnVolver" VerticalAlignment="Bottom" Width="81" Click="btnVolver_Click" TabIndex="17">Volver</Button><Label Height="26" Margin="42,0,44,81" Name="lblAvisos" VerticalAlignment="Bottom" FontSize="13" Foreground="Red"></Label>
+        <Label Height="24" HorizontalAlignment="Left" Margin="42,0,0,289" Name="lblSalario" VerticalAlignment="Bottom" Width="105">Salario(*)</Label>
+        <TextBox Height="24" Margin="153,0,253,289" Name="txtSalario" VerticalAlignment="Bottom" TabIndex="8" />
+        <Label Height="24" HorizontalAlignment="Left" Margin="42,0,0,260" Name="lblUsuario" VerticalAlignment="Bottom" Width="105">Usuario(*)</Label>
+        <TextBox Height="24" Margin="153,0,253,261" Name="txtus" VerticalAlignment="Bottom" TabIndex="9" />
+        <Label Height="24" HorizontalAlignment="Right" Margin="0,0,162,261" Name="lblPass" VerticalAlignment="Bottom" Width="85">Contraseña(*)</Label>
+        <PasswordBox Height="23" Margin="0,0,44,261" Name="txtPass" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="114" TabIndex="10" />
+        <Label Height="28" HorizontalAlignment="Left" Margin="42,0,0,229" Name="lblDerechos" VerticalAlignment="Bottom" Width="105">Derechos</Label>
+        <ComboBox Height="23" Margin="153,0,253,234" Name="comboDerechos" VerticalAlignment="Bottom" TabIndex="11" />
+        <Label Height="25" HorizontalAlignment="Left" Margin="42,0,0,200" Name="lblTurno" VerticalAlignment="Bottom" Width="105">Turno</Label>
+        <RadioButton Height="16" Margin="98,0,0,170" Name="rMañana" VerticalAlignment="Bottom" GroupName="fisio" TabIndex="12" HorizontalAlignment="Left" Width="63">Mañana</RadioButton>
+        <RadioButton Height="16" HorizontalAlignment="Left" Margin="167,0,0,170" Name="rTarde" VerticalAlignment="Bottom" Width="54" GroupName="fisio" TabIndex="13">Tarde</RadioButton>
+        <RadioButton Height="16" Margin="227,0,179,170" Name="rCompleta" VerticalAlignment="Bottom" GroupName="fisio" IsChecked="True" TabIndex="14">Todo el día</RadioButton>
+        <Button Height="30" Margin="0,0,127,115" Name="btnModif" VerticalAlignment="Bottom" Click="btnModif_Click" HorizontalAlignment="Right" Width="81" TabIndex="16">Modificar</Button>
+        <Button Height="21" HorizontalAlignment="Right" Margin="0,173,12,0" Name="btnEliminar" VerticalAlignment="Top" Width="64" Click="btnEliminar_Click">Eliminar</Button>
+        <Label HorizontalAlignment="Left" Margin="42,316,0,0" Name="lblNumC" Width="105" Height="24" VerticalAlignment="Top">Nº colegiado(*)</Label>
+        <TextBox Margin="153,316,44,0" Name="txtNumCol" Height="24" VerticalAlignment="Top" TabIndex="6" />
+        <Label Height="21" Margin="98,66,78,0" Name="lblAvisios2" VerticalAlignment="Top" Foreground="Red"></Label>
+        <ListView ItemsSource="{Binding EmpCollection}" ItemTemplate="{DynamicResource CustomerTemplate}" Name="listVFisios" Margin="12,4,12,0" Height="164" VerticalAlignment="Top" SelectionChanged="listVFisios_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" Header="DNI" DisplayMemberBinding="{Binding Dni}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    <GridViewColumn Width="197" Header="Nombre" DisplayMemberBinding="{Binding Nombre}" HeaderTemplate="{StaticResource BlueHeader}"/>
+                    <GridViewColumn Width="197" Header="Apellidos" DisplayMemberBinding="{Binding Apellidos}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    
+                </GridView>
+            </ListView.View>
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                    <GradientStop Color="#FFFFE07E" Offset="0"/>
+                    <GradientStop Color="#FFFFFAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}" >
+                    <Setter Property="Height" Value="24" />
+                    <Setter Property="Background" Value="#5EF4E057" />
+                    <Setter Property="Foreground" Value="#FF4B94EC"/>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="DarkBlue" />
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFFFC704" Offset="0.986"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.5"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.51"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label Height="24" HorizontalAlignment="Right" Margin="0,0,127,289" Name="label1" VerticalAlignment="Bottom" Width="120">€</Label>
+    </Grid>
+    <Window.Background>
+    <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+        <GradientStop Color="#FFFFE07E" Offset="0"/>
+        <GradientStop Color="#FFFFFAEA" Offset="1"/>
+    </LinearGradientBrush>
+    </Window.Background>
+</Window>

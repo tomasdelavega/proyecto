@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/ServerFisio.DatosDB" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/ServerFisio.DatosDB" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="THistorial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_diagnostico" type="xs:int" />
+      <xs:element minOccurs="0" name="Dni_paciente" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="F_inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="F_fin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Zona" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TTratamiento" nillable="true" type="tns:ArrayOfTTratamiento">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="THistorial" nillable="true" type="tns:THistorial" />
+  <xs:complexType name="ArrayOfTTratamiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTratamiento" nillable="true" type="tns:TTratamiento" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTratamiento" nillable="true" type="tns:ArrayOfTTratamiento" />
+  <xs:complexType name="TTratamiento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_historial" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_terapia" type="xs:int" />
+      <xs:element minOccurs="0" name="F_inicio" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="F_fin" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Estado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TTratamiento" nillable="true" type="tns:TTratamiento" />
+  <xs:complexType name="ArrayOfTSesionCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TSesionCita" nillable="true" type="tns:TSesionCita" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTSesionCita" nillable="true" type="tns:ArrayOfTSesionCita" />
+  <xs:complexType name="TSesionCita">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_historial" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_terapia" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Precio" type="xs:double" />
+      <xs:element minOccurs="0" name="Pagado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_fisio" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Id_sala" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_cita" type="xs:int" />
+      <xs:element minOccurs="0" name="Dni_paciente" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TSesionCita" nillable="true" type="tns:TSesionCita" />
+  <xs:complexType name="TPaciente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="F_nac" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Sexo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tfno1" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Tfno2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Observs" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TComentario" nillable="true" type="tns:ArrayOfTComentario">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="THistorial" nillable="true" type="tns:ArrayOfTHistorial">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+      <xs:element minOccurs="0" name="TSesionCita" nillable="true" type="tns:ArrayOfTSesionCita">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TPaciente" nillable="true" type="tns:TPaciente" />
+  <xs:complexType name="ArrayOfTComentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TComentario" nillable="true" type="tns:TComentario" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTComentario" nillable="true" type="tns:ArrayOfTComentario" />
+  <xs:complexType name="TComentario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Comentario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Dni_paciente" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TComentario" nillable="true" type="tns:TComentario" />
+  <xs:complexType name="ArrayOfTHistorial">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="THistorial" nillable="true" type="tns:THistorial" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTHistorial" nillable="true" type="tns:ArrayOfTHistorial" />
+  <xs:complexType name="ArrayOfTPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TPedido" nillable="true" type="tns:TPedido" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTPedido" nillable="true" type="tns:ArrayOfTPedido" />
+  <xs:complexType name="TPedido">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_pedido" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Observaciones" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLineaPedidos" nillable="true" type="tns:ArrayOfTLineaPedidos">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TPedido" nillable="true" type="tns:TPedido" />
+  <xs:complexType name="ArrayOfTLineaPedidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TLineaPedidos" nillable="true" type="tns:TLineaPedidos" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTLineaPedidos" nillable="true" type="tns:ArrayOfTLineaPedidos" />
+  <xs:complexType name="TLineaPedidos">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_pedido" type="xs:int" />
+      <xs:element minOccurs="0" name="Id_material" type="xs:int" />
+      <xs:element minOccurs="0" name="Cantidad" type="xs:int" />
+      <xs:element minOccurs="0" name="Precio" type="xs:double" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TLineaPedidos" nillable="true" type="tns:TLineaPedidos" />
+  <xs:complexType name="TFisioterapeuta">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Dni" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Apellidos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Num_colegiado" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tfno" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Tfno2" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Salario" type="xs:double" />
+      <xs:element minOccurs="0" name="Usuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Pass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Derechos" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Turno" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TFisioterapeuta" nillable="true" type="tns:TFisioterapeuta" />
+  <xs:complexType name="ArrayOfTPaciente">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TPaciente" nillable="true" type="tns:TPaciente" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTPaciente" nillable="true" type="tns:ArrayOfTPaciente" />
+  <xs:complexType name="ArrayOfTMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TMaterial" nillable="true" type="tns:TMaterial" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTMaterial" nillable="true" type="tns:ArrayOfTMaterial" />
+  <xs:complexType name="TMaterial">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id_material" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TLineaPedidos" nillable="true" type="tns:ArrayOfTLineaPedidos">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TMaterial" nillable="true" type="tns:TMaterial" />
+  <xs:complexType name="ArrayOfTFisioterapeuta">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TFisioterapeuta" nillable="true" type="tns:TFisioterapeuta" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTFisioterapeuta" nillable="true" type="tns:ArrayOfTFisioterapeuta" />
+  <xs:complexType name="TSala">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Numero" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TSala" nillable="true" type="tns:TSala" />
+  <xs:complexType name="ArrayOfTSala">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TSala" nillable="true" type="tns:TSala" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTSala" nillable="true" type="tns:ArrayOfTSala" />
+  <xs:complexType name="ArrayOfTDiagnostico">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TDiagnostico" nillable="true" type="tns:TDiagnostico" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTDiagnostico" nillable="true" type="tns:ArrayOfTDiagnostico" />
+  <xs:complexType name="TDiagnostico">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="THistorial" nillable="true" type="tns:ArrayOfTHistorial">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TDiagnostico" nillable="true" type="tns:TDiagnostico" />
+  <xs:complexType name="TTerapia">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Numsesiones" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Id" type="xs:int" />
+      <xs:element minOccurs="0" name="Imagen" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TTratamiento" nillable="true" type="tns:ArrayOfTTratamiento">
+        <xs:annotation>
+          <xs:appinfo>
+            <DefaultValue EmitDefaultValue="false" xmlns="http://schemas.microsoft.com/2003/10/Serialization/" />
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TTerapia" nillable="true" type="tns:TTerapia" />
+  <xs:complexType name="ArrayOfTTerapia">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="TTerapia" nillable="true" type="tns:TTerapia" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfTTerapia" nillable="true" type="tns:ArrayOfTTerapia" />
+</xs:schema>

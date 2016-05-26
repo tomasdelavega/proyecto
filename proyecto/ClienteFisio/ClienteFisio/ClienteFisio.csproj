@@ -1,0 +1,446 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CCF91AA-48C8-4EC7-8EDA-F7D6382F3EF6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClienteFisio</RootNamespace>
+    <AssemblyName>ClienteFisio</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <PublishUrl>http://localhost/ClienteFisio/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.WpfEditors, Version=5.6.0.4, Culture=neutral, PublicKeyToken=cbba4a1563683cdb" />
+    <Reference Include="DevComponents.WpfRibbon, Version=5.6.0.4, Culture=neutral, PublicKeyToken=2037e151916410e7" />
+    <Reference Include="DevComponents.WpfSchedule, Version=5.6.0.4, Culture=neutral, PublicKeyToken=7c218705742a0d96" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Presentation">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationTypes">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationCore">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="PresentationFramework">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsFormsIntegration">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WPFToolkit, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WPFToolkit.Design, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="WPFToolkit.VisualStudio.Design, Version=3.5.40128.1, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClienteWCF.cs" />
+    <Compile Include="Interfaz\VComentarios.xaml.cs">
+      <DependentUpon>VComentarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\VConfigCon.xaml.cs">
+      <DependentUpon>VConfigCon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\VCuentas.xaml.cs">
+      <DependentUpon>VCuentas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Citas\VCitas.xaml.cs">
+      <DependentUpon>VCitas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Diagnosticos\Vdiagnosticos.xaml.cs">
+      <DependentUpon>Vdiagnosticos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Empleados\VFisios.xaml.cs">
+      <DependentUpon>VFisios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Mails\VMails.xaml.cs">
+      <DependentUpon>VMails.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Materiales\VMateriales.xaml.cs">
+      <DependentUpon>VMateriales.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Materiales\VPedidos.xaml.cs">
+      <DependentUpon>VPedidos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VAñadirPaciente.xaml.cs">
+      <DependentUpon>VAñadirPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VHistorial.xaml.cs">
+      <DependentUpon>VHistorial.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VModifPaciente.xaml.cs">
+      <DependentUpon>VModifPaciente.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VNuevoHist.xaml.cs">
+      <DependentUpon>VNuevoHist.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VNuevoTratamiento.xaml.cs">
+      <DependentUpon>VNuevoTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VPacientes.xaml.cs">
+      <DependentUpon>VPacientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VSesion.xaml.cs">
+      <DependentUpon>VSesion.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Pacientes\VTratamiento.xaml.cs">
+      <DependentUpon>VTratamiento.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Salas\VSalas.xaml.cs">
+      <DependentUpon>VSalas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Terapias\VTerapias.xaml.cs">
+      <DependentUpon>VTerapias.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\VConfig.xaml.cs">
+      <DependentUpon>VConfig.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Service References\ClientWCF\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\VLogin.xaml.cs">
+      <DependentUpon>VLogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\VPrincipal.xaml.cs">
+      <DependentUpon>VPrincipal.xaml</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Interfaz\VComentarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\VConfigCon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\VCuentas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Citas\VCitas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Diagnosticos\Vdiagnosticos.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\Empleados\VFisios.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\Mails\VMails.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Materiales\VMateriales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Materiales\VPedidos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VAñadirPaciente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VHistorial.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VModifPaciente.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VNuevoHist.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VNuevoTratamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VPacientes.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VSesion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Pacientes\VTratamiento.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\Salas\VSalas.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\Terapias\VTerapias.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Interfaz\VLogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\VConfig.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interfaz\VPrincipal.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ClientWCF\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientWCF\ServerFisio.disco" />
+    <None Include="Service References\ClientWCF\ServerFisio1.xsd" />
+    <None Include="Service References\ClientWCF\ServerFisio2.xsd" />
+    <None Include="Service References\ClientWCF\ServerFisio4.xsd" />
+    <None Include="Service References\ClientWCF\ServerFisio5.xsd" />
+    <None Include="Service References\ClientWCF\ServerFisio6.xsd" />
+    <None Include="Service References\ClientWCF\Servicios.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientWCF\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TFisioterapeuta.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TComentario.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TDiagnostico.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.THistorial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TMaterial.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TPaciente.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TPedido.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TSala.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TSesionCita.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TTerapia.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\ClienteFisio.ClientWCF.TTratamiento.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Service References\ClientWCF\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\people.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Doc.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Edit Email.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\phonebook.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\001_shoppingcart_empty.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Shutdown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Application.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\vault.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Medical  Student 2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Calendar.png" />
+    <Resource Include="data\images\diag.png" />
+    <Resource Include="data\images\mats.png" />
+    <Resource Include="data\images\sala.png" />
+    <Resource Include="data\images\terapia.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\masthead.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\Chat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="data\images\logo_mini.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ClientWCF\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

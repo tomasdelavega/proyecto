@@ -1,0 +1,25 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.Salas.VSalas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/sala.png"
+    Title="Salas" Height="414" Width="323" WindowStartupLocation="CenterOwner" Closing="Window_Closing" Loaded="Window_Loaded" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+            <GradientStop Color="#FFFFE07E" Offset="0"/>
+            <GradientStop Color="#FFFFFAEA" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Label Margin="17,137,0,307" Name="lblNombre" HorizontalAlignment="Left" Width="64">Nombre</Label>
+        <TextBox Height="24
+                 " Margin="109,137,29,0" Name="txtNombre" VerticalAlignment="Top" TabIndex="2" />
+        <Label Height="27" HorizontalAlignment="Left" Margin="17,162,0,0" Name="lbDescripcion" VerticalAlignment="Top" Width="73">Descripción</Label>
+        <TextBox Margin="25,0,29,114" Name="txtDescripcion" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Height="69" VerticalAlignment="Bottom" TabIndex="3" />
+        <Button Height="25" Margin="25,0,0,86" Name="btnAgregar" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="65" Click="btnAgregar_Click" TabIndex="4">Agregar</Button>
+        <Button Height="22" HorizontalAlignment="Right" Margin="0,0,29,29" Name="btnSalir" VerticalAlignment="Bottom" Width="77" Click="btnSalir_Click" TabIndex="5">Volver</Button>
+        <Label Height="26" Margin="25,0,29,57" Name="lblAvisos" VerticalAlignment="Bottom" Foreground="Red" FontSize="13" HorizontalContentAlignment="Center"></Label>
+        <ListBox Height="58" Margin="0,39,29,0" Name="comboSalas" VerticalAlignment="Top" SelectionChanged="comboSalas_SelectionChanged" TabIndex="1" HorizontalAlignment="Right" Width="163" />
+        <Button Height="20" Margin="0,102,29,0" Name="btnEliminar" VerticalAlignment="Top" HorizontalAlignment="Right" Width="51" Click="btnEliminar_Click" TabIndex="6">Eliminar</Button>
+        <Image Source="/data/images/sala.png" Margin="25,39,0,0" Name="image1" Stretch="Fill" Height="58" HorizontalAlignment="Left" VerticalAlignment="Top" Width="67" />
+    </Grid>
+</Window>

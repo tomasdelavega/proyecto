@@ -1,0 +1,336 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.Citas.VCitas"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/Calendar.png"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Title="Citaciones" Height="750" Width="1032" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" xmlns:my="http://schemas.microsoft.com/wpf/2008/toolkit" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Resources>
+        <DataTemplate x:Key="BlueHeader">
+            <StackPanel Orientation="Horizontal" Margin="-5,-5,-5,-5" Width="1000">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF223B84" Offset="1"/>
+                        <GradientStop Color="#FF57A0F4" Offset="0.5"/>
+                        <GradientStop Color="#FF4B94EC" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Margin="10,10,10,10" Text="{Binding}" VerticalAlignment="Center" Foreground="White"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid Height="722" Width="1024" Name="gridPrinc">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                <GradientStop Color="#FFFFE07E" Offset="0" />
+                <GradientStop Color="#FFFFFAEA" Offset="1" />
+            </LinearGradientBrush>
+
+        </Grid.Background>
+
+        <my:Calendar Margin="23,96.545,0,0" Name="calendar1" HorizontalAlignment="Left" Width="191" SelectedDatesChanged="calendar1_SelectedDatesChanged" Height="166" VerticalAlignment="Top" BorderThickness="3">
+            <my:Calendar.Background>
+                <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                    <GradientStop Color="#FFFFE07E" Offset="0" />
+                    <GradientStop Color="#FFFFFAEA" Offset="1" />
+                </LinearGradientBrush>
+            </my:Calendar.Background>
+        </my:Calendar>
+        <Grid Margin="430,0,20,0" Name="grid1" Panel.ZIndex="0" Visibility="Visible">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="66*" />
+                <ColumnDefinition Width="346*" />
+                <ColumnDefinition Width="58*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                <RowDefinition Height="55*" />
+                
+            </Grid.RowDefinitions>
+            <ListView ItemsSource="{Binding PacientesCollection9}" Grid.Column="1" Grid.Row="0" Name="listV9" Panel.ZIndex="2" Background="#FFA9F5A9" SelectionChanged="listV9_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146" Header="Paciente" DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"  Header="Fisioterapeuta" DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96" Header="Sala" DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" Header="Pagado" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection10}" Grid.Column="1" Grid.Row="1" Name="listV10" Panel.ZIndex="3" Background="#FFA9F5A9" SelectionChanged="listV10_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />                    
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection11}" Grid.Column="1" Grid.Row="2" Name="listV11" Background="#FFA9F5A9" SelectionChanged="listV11_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection12}" Grid.Column="1" Grid.Row="3" Name="listV12" Background="#FFA9F5A9" SelectionChanged="listV12_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection13}" Grid.Column="1" Grid.Row="4" Name="listV13" Background="#FFA9F5A9" SelectionChanged="listV13_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection16}" Grid.Column="1" Grid.Row="5" Name="listV16" Background="#FFA9F5A9" SelectionChanged="listV16_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection17}" Grid.Column="1" Grid.Row="6" Name="listV17" Background="#FFA9F5A9" SelectionChanged="listV17_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                       <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection18}" Grid.Column="1" Grid.Row="7" Name="listV18" Background="#FFA9F5A9" SelectionChanged="listV18_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection19}" Grid.Column="1" Grid.Row="8" Name="listV19" Background="#FFA9F5A9" SelectionChanged="listV19_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection20}" Grid.Column="1" Grid.Row="9" Name="listV20" Background="#FFA9F5A9" SelectionChanged="listV20_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <ListView ItemsSource="{Binding PacientesCollection21}" Grid.Column="1" Grid.Row="10" Name="listV21" Background="#FFA9F5A9" SelectionChanged="listV21_SelectionChanged">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Width="146"  DisplayMemberBinding="{Binding Paciente}" />
+                        <GridViewColumn Width="106"   DisplayMemberBinding="{Binding Fisio}" />
+                        <GridViewColumn Width="96"  DisplayMemberBinding="{Binding Sala}"  />
+                        <GridViewColumn Width="76" DisplayMemberBinding="{Binding Pagado}"  />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Label Grid.Column="0" Grid.Row="0" Name="lbl9" FontSize="15" HorizontalContentAlignment="Center">9:00</Label>
+            <Label Grid.Column="0" Grid.Row="1" Name="lbl10" FontSize="15" HorizontalContentAlignment="Center">10:00</Label>
+            <Label Grid.Column="0" Grid.Row="2" Name="lbl11" FontSize="15" HorizontalContentAlignment="Center">11:00</Label>
+            <Label Grid.Column="0" Grid.Row="3" Name="lbl12" FontSize="15" HorizontalContentAlignment="Center">12:00</Label>
+            <Label Grid.Column="0" Grid.Row="4" Name="lbl13" FontSize="15" HorizontalContentAlignment="Center">13:00</Label>
+            <Label Grid.Column="0" Grid.Row="5" Name="lbl16" FontSize="15" HorizontalContentAlignment="Center">16:00</Label>
+            <Label Grid.Column="0" Grid.Row="6" Name="lbl17" FontSize="15" HorizontalContentAlignment="Center">17:00</Label>
+            <Label Grid.Column="0" Grid.Row="7" Name="lbl18" FontSize="15" HorizontalContentAlignment="Center">18:00</Label>
+            <Label Grid.Column="0" Grid.Row="8" Name="lbl19" FontSize="15" HorizontalContentAlignment="Center">19:00</Label>
+            <Label Grid.Column="0" Grid.Row="9" Name="lbl20" FontSize="15" HorizontalContentAlignment="Center">20:00</Label>
+            <Label Grid.Column="0" Grid.Row="10" Name="lbl21" FontSize="15" HorizontalContentAlignment="Center">21:00</Label>
+            <Button Grid.Column="2" Width="33" Margin="6,6,24,27" Name="btnA9" Click="btnA9_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="1" Margin="9.917,6,27.917,27" Name="btnA10" Click="btnA10_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="2" Margin="9.917,6,27.917,27" Name="btnA11" Click="btnA11_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="3" Margin="9.917,6,27.917,27" Name="btnA12" Click="btnA12_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="4" Margin="9.917,6,27.917,27" Name="btnA13" Click="btnA13_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="5" Margin="9.917,6,27.917,27" Name="btnA16" Click="btnA16_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="6" Margin="9.917,6,27.917,27" Name="btnA17" Click="btnA17_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="7" Margin="9.917,6,27.917,27" Name="btnA18" Click="btnA18_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="8" Margin="9.917,6,27.917,27" Name="btnA19" Click="btnA19_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="9" Margin="9.917,6,27.917,27" Name="btnA20" Click="btnA20_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            <Button Grid.Column="2" Grid.Row="10" Margin="9.917,6,27.917,27" Name="btnA21" Click="btnA21_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/data/images/Add.png">
+
+                    </ImageBrush>
+                </Button.Background>
+            </Button>
+            
+        </Grid>
+        <Grid Margin="411,0,0,165.91" Name="gridSelecFisioSala" Visibility="Hidden" Panel.ZIndex="2" Opacity="0.8" Height="162" VerticalAlignment="Bottom">
+            <Button Height="23" HorizontalAlignment="Right" Margin="0,0,113,8" Name="btnNoconfirm" VerticalAlignment="Bottom" Width="65" Panel.ZIndex="3" Click="btnNoconfirm_Click">volver</Button>
+            <ComboBox Margin="130.349,0,113,40" Name="comboSala" Panel.ZIndex="3" Opacity="0.9" Height="22.999" VerticalAlignment="Bottom" />
+            <ComboBox Margin="0,72,113,67" Name="ComboFisio" Panel.ZIndex="3" Opacity="0.9" HorizontalAlignment="Right" Width="370" />
+            
+            <Button Height="23" Margin="130.349,0,0,8" Name="btncomfirmar" VerticalAlignment="Bottom" Click="btncomfirmar_Click" Panel.ZIndex="3" HorizontalAlignment="Left" Width="65">Confirmar</Button>
+            <Label Panel.ZIndex="3" HorizontalAlignment="Left" Margin="87,0,0,40" Name="lblSelectSal" Width="38" Height="22.999" VerticalAlignment="Bottom">Sala</Label>
+            <Label Panel.ZIndex="3" HorizontalAlignment="Left" Margin="86,72,0,67" Name="lblSelctfisio" Width="38">Fisio</Label>
+            <Label Panel.ZIndex="3" Height="28" Margin="8,5,26,0" Name="lblConfirmTit" VerticalAlignment="Top" FontSize="15" HorizontalContentAlignment="Center"></Label>
+            <ComboBox Panel.ZIndex="3" Height="23" Margin="130,36,113,0" Name="comboDiag" VerticalAlignment="Top" />
+            <Rectangle Name="rectangle1" Stroke="Black" RadiusX="5" RadiusY="5" Margin="0.349,0,0,0" Panel.ZIndex="2" StrokeThickness="3">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                        <GradientStop Color="#FFFFE07E" Offset="0" />
+                        <GradientStop Color="#FFFFFAEA" Offset="1" />
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Label Panel.ZIndex="3" Height="22.637" HorizontalAlignment="Left" Margin="11,37,0,0" Name="label1" VerticalAlignment="Top" Width="113">Diagnóstico en curso</Label>
+        </Grid>
+        <Label Height="28" HorizontalAlignment="Left" Margin="23,283,0,0" Name="lblAvisos" VerticalAlignment="Top" Width="380" Foreground="Red" FontSize="14"></Label>
+        <Label Height="28
+               " HorizontalAlignment="Left" Margin="23,0,0,103.272" Name="lblAvisosPacientes" VerticalAlignment="Bottom" Width="380" Foreground="Red" FontSize="14"></Label>
+        <Label Height="28
+               " HorizontalAlignment="Left" Margin="23,0,0,65.637" Name="lblAvisosPacientes2" VerticalAlignment="Bottom" Width="380" Foreground="Red" FontSize="14"></Label>
+        <Label Margin="23,348,0,346" Name="lblAvisosSalas" Width="380" Foreground="Red" HorizontalAlignment="Left" FontSize="14"></Label>
+        <Label Height="28" HorizontalAlignment="Left" Margin="23,314,0,0" Name="lblAvisosFisios" VerticalAlignment="Top" Width="380" Foreground="Red" FontSize="14"></Label>
+        <ListView ItemsSource="{Binding PacientesCollection}" ItemTemplate="{DynamicResource CustomerTemplate}" Name="listViewPac" Margin="23,0,0,168.273" HorizontalAlignment="Left" Width="380" Height="161" VerticalAlignment="Bottom" SelectionChanged="listViewPac_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Apellidos" DisplayMemberBinding="{Binding Apellidos}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    <GridViewColumn Width="130" Header="Nombre" DisplayMemberBinding="{Binding Nombre}" HeaderTemplate="{StaticResource BlueHeader}"/>
+                    <GridViewColumn Width="100" Header="DNI" DisplayMemberBinding="{Binding Dni}" HeaderTemplate="{StaticResource BlueHeader}" />
+                </GridView>
+            </ListView.View>
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                    <GradientStop Color="#FFFFE07E" Offset="0"/>
+                    <GradientStop Color="#FFFFFAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}" >
+                    <Setter Property="Height" Value="24" />
+                    <Setter Property="Background" Value="#5EF4E057" />
+                    <Setter Property="Foreground" Value="#FF4B94EC"/>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="DarkBlue" />
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFFFC704" Offset="0.986"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.5"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.51"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label Height="80.546" HorizontalAlignment="Left" Margin="23,13.727,0,0" Name="lblfecha" VerticalAlignment="Top" Width="380" FontSize="30"></Label>
+        <Button Height="23" HorizontalAlignment="Left" Margin="23,0,0,142" Name="btnAñadir" VerticalAlignment="Bottom" Width="65" Click="btnAñadir_Click">Añadir</Button>
+        <Button Height="23" HorizontalAlignment="Left" Margin="13,0,0,10" Name="btnVolver" VerticalAlignment="Bottom" Width="75" Click="btnVolver_Click">Volver</Button>
+        <Button Height="63.363" HorizontalAlignment="Left" Margin="328,106.547,0,0" Name="btnEmails" VerticalAlignment="Top" Width="75" Click="btnEmails_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Edit Email.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label Height="26.008" HorizontalAlignment="Left" Margin="330,170.901,0,0" Name="label2" VerticalAlignment="Top" Width="73">Enviar email</Label>
+    </Grid>
+</Window>

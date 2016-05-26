@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="faa4c75c-76ac-4d34-92a1-63f743930ec6" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:8000/ServerFisio" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServerFisio1.xsd" MetadataType="Schema" ID="98f17072-e5e6-47dc-8b45-a85a15dc3801" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?xsd=xsd4" />
+    <MetadataFile FileName="Servicios.wsdl" MetadataType="Wsdl" ID="10b0b512-39b3-4035-b7bd-83b1e9027099" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?wsdl" />
+    <MetadataFile FileName="ServerFisio6.xsd" MetadataType="Schema" ID="ef32fecd-98fc-4835-80fc-d545a31bb9fe" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?xsd=xsd3" />
+    <MetadataFile FileName="ServerFisio2.xsd" MetadataType="Schema" ID="23520215-e7ee-4a89-b750-7f1c3f10d356" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?xsd=xsd2" />
+    <MetadataFile FileName="ServerFisio4.xsd" MetadataType="Schema" ID="3bcb0621-87c6-4c76-934d-c0ab0ab9ab23" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?xsd=xsd1" />
+    <MetadataFile FileName="ServerFisio5.xsd" MetadataType="Schema" ID="b2bb10e4-05c0-40bb-aa80-0e0d95c3850c" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?xsd=xsd0" />
+    <MetadataFile FileName="ServerFisio.disco" MetadataType="Disco" ID="a3dd7622-9d15-4976-905e-49c3159fa7a1" SourceId="1" SourceUrl="http://localhost:8000/ServerFisio?disco" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,60 @@
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe.config
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfig.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VServidor.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Properties.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.csproj.GenerateResource.Cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.pdb
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe.config
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.exe
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.pdb
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.pdb
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ResolveAssemblyReference.cache
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfig.resources
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VServidor.resources
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Properties.Resources.resources
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.csproj.GenerateResource.Cache
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe.config
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.exe
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.pdb
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Release\ServerFisio.pdb
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfig.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VServidor.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Properties.Resources.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.csproj.GenerateResource.Cache
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigSql.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigSql.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigMail.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigMail.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigSql.resources
+E:\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigMail.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe.config
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.exe
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.pdb
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\bin\Release\ServerFisio.pdb
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigMail.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfig.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigSql.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VServidor.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.Properties.Resources.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ServerFisio\ServerFisio\obj\Release\ServerFisio.csproj.GenerateResource.Cache
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe.config
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.exe
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.pdb
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\bin\Release\ServerFisio.exe
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\bin\Release\ServerFisio.pdb
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ResolveAssemblyReference.cache
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigMail.resources
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfig.resources
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VConfigSql.resources
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.Interfaz.VServidor.resources
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.Properties.Resources.resources
+E:\CLASE\Proyecto\ServerFisio\ServerFisio\obj\Release\ServerFisio.csproj.GenerateResource.Cache

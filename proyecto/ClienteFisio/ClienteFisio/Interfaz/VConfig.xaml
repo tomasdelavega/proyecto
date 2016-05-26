@@ -1,0 +1,23 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.VConfig"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/Settings.png"
+    Title="Configuración precios" Height="222" Width="308" ResizeMode="NoResize" WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" Closing="Window_Closing">
+    <Grid>
+        <Label Height="26" Margin="16,51,112,0" Name="label1" VerticalAlignment="Top">Precio Standar de cada sesión:</Label>
+        <TextBox Height="23" Margin="0,51,48,0" Name="textBox1" VerticalAlignment="Top" HorizontalAlignment="Right" Width="58" TabIndex="1" />
+        <Button Margin="116,0,112,43" Name="btnModif" Click="btnModif_Click" Height="22" VerticalAlignment="Bottom">Aplicar</Button>
+        <Label Height="22" HorizontalAlignment="Right" Margin="0,52,22,0" Name="label2" VerticalAlignment="Top" Width="21">€</Label>
+        <Label Margin="16,0,13,10" Name="label3" Foreground="Red" FontSize="13" HorizontalContentAlignment="Center" Height="28" VerticalAlignment="Bottom"></Label>
+        <Label Margin="16,83,112,78" Name="label4">Cuota de alquiler:</Label>
+        <TextBox Margin="0,83,48,78" Name="txtAlq" HorizontalAlignment="Right" Width="58" TabIndex="2" />
+        <Label HorizontalAlignment="Right" Margin="0,80,22,78" Name="label5" Width="21">€</Label>
+        <Label FontSize="15" Height="29" HorizontalAlignment="Left" Margin="16,0,0,142" Name="label7" VerticalAlignment="Bottom" Width="109">Precios</Label>
+    </Grid>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+            <GradientStop Color="#FFFFE07E" Offset="0"/>
+            <GradientStop Color="#FFFFFAEA" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+</Window>

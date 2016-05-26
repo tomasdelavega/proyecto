@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="FisioDB" EntityNamespace="ServerFisio.DatosDB" ContextNamespace="ServerFisio.DatosDB" Class="FisioDBDataContext" Serialization="Unidirectional" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.TComentario" Member="TComentario">
+    <Type Name="TComentario">
+      <Column Name="id" Member="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="comentario" Member="Comentario" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="dni_paciente" Member="Dni_paciente" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_TComentario_TPaciente" Member="TPaciente" ThisKey="Dni_paciente" OtherKey="Dni" Type="TPaciente" IsForeignKey="true" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TDiagnostico" Member="TDiagnostico">
+    <Type Name="TDiagnostico">
+      <Column Name="id" Member="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FK_THistorial_TDiagnostico" Member="THistorial" ThisKey="Id" OtherKey="Id_diagnostico" Type="THistorial" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TFisioterapeuta" Member="TFisioterapeuta">
+    <Type Name="TFisioterapeuta">
+      <Column Name="dni" Member="Dni" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="apellidos" Member="Apellidos" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="num_colegiado" Member="Num_colegiado" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="tfno" Member="Tfno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tfno2" Member="Tfno2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email" Member="Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="salario" Member="Salario" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="usuario" Member="Usuario" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="pass" Member="Pass" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="derechos" Member="Derechos" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="turno" Member="Turno" Type="System.String" DbType="Char(1) NOT NULL" CanBeNull="false" />
+    </Type>
+  </Table>
+  <Table Name="dbo.THistorial" Member="THistorial">
+    <Type Name="THistorial">
+      <Column Name="id" Member="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_diagnostico" Member="Id_diagnostico" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="dni_paciente" Member="Dni_paciente" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="f_inicio" Member="F_inicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="f_fin" Member="F_fin" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="estado" Member="Estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Member="Observaciones" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="zona" Member="Zona" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="FK_THistorial_TDiagnostico" Member="TDiagnostico" ThisKey="Id_diagnostico" OtherKey="Id" Type="TDiagnostico" IsForeignKey="true" />
+      <Association Name="FK_THistorial_TPaciente" Member="TPaciente" ThisKey="Dni_paciente" OtherKey="Dni" Type="TPaciente" IsForeignKey="true" />
+      <Association Name="FK_TTratamiento_THistorial" Member="TTratamiento" ThisKey="Id" OtherKey="Id_historial" Type="TTratamiento" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TLineaPedidos" Member="TLineaPedidos">
+    <Type Name="TLineaPedidos">
+      <Column Name="id_pedido" Member="Id_pedido" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_material" Member="Id_material" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="cantidad" Member="Cantidad" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="precio" Member="Precio" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Association Name="FK_TLineaPedidos_TMaterial" Member="TMaterial" ThisKey="Id_material" OtherKey="Id_material" Type="TMaterial" IsForeignKey="true" />
+      <Association Name="FK_TLineaPedidos_TPedido" Member="TPedido" ThisKey="Id_pedido" OtherKey="Id_pedido" Type="TPedido" IsForeignKey="true" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TMaterial" Member="TMaterial">
+    <Type Name="TMaterial">
+      <Column Name="id_material" Member="Id_material" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="FK_TLineaPedidos_TMaterial" Member="TLineaPedidos" ThisKey="Id_material" OtherKey="Id_material" Type="TLineaPedidos" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TPaciente" Member="TPaciente">
+    <Type Name="TPaciente">
+      <Column Name="dni" Member="Dni" Type="System.String" DbType="VarChar(20) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="apellidos" Member="Apellidos" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="f_nac" Member="F_nac" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="sexo" Member="Sexo" Type="System.String" DbType="Char(1)" CanBeNull="true" />
+      <Column Name="tfno1" Member="Tfno1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tfno2" Member="Tfno2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="email" Member="Email" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="observs" Member="Observs" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FK_TComentario_TPaciente" Member="TComentario" ThisKey="Dni" OtherKey="Dni_paciente" Type="TComentario" DeleteRule="CASCADE" />
+      <Association Name="FK_THistorial_TPaciente" Member="THistorial" ThisKey="Dni" OtherKey="Dni_paciente" Type="THistorial" DeleteRule="NO ACTION" />
+      <Association Name="FK_TSesionCita_TPaciente" Member="TSesionCita" ThisKey="Dni" OtherKey="Dni_paciente" Type="TSesionCita" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TPedido" Member="TPedido">
+    <Type Name="TPedido">
+      <Column Name="id_pedido" Member="Id_pedido" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Member="Observaciones" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FK_TLineaPedidos_TPedido" Member="TLineaPedidos" ThisKey="Id_pedido" OtherKey="Id_pedido" Type="TLineaPedidos" DeleteRule="CASCADE" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TSala" Member="TSala">
+    <Type Name="TSala">
+      <Column Name="numero" Member="Numero" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TSesionCita" Member="TSesionCita">
+    <Type Name="TSesionCita">
+      <Column Name="id_historial" Member="Id_historial" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_terapia" Member="Id_terapia" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="fecha" Member="Fecha" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="precio" Member="Precio" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="pagado" Member="Pagado" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Member="Observaciones" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="id_fisio" Member="Id_fisio" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="id_sala" Member="Id_sala" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id_cita" Member="Id_cita" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="dni_paciente" Member="Dni_paciente" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Association Name="FK_TSesionCita_TPaciente" Member="TPaciente" ThisKey="Dni_paciente" OtherKey="Dni" Type="TPaciente" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTerapia" Member="TTerapia">
+    <Type Name="TTerapia">
+      <Column Name="nombre" Member="Nombre" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="descripcion" Member="Descripcion" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="numsesiones" Member="Numsesiones" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="id" Member="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="imagen" Member="Imagen" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Association Name="FK_TTratamiento_TTerapia" Member="TTratamiento" ThisKey="Id" OtherKey="Id_terapia" Type="TTratamiento" DeleteRule="NO ACTION" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TTratamiento" Member="TTratamiento">
+    <Type Name="TTratamiento">
+      <Column Name="id_historial" Member="Id_historial" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_terapia" Member="Id_terapia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="f_inicio" Member="F_inicio" Type="System.DateTime" DbType="SmallDateTime NOT NULL" CanBeNull="false" />
+      <Column Name="f_fin" Member="F_fin" Type="System.DateTime" DbType="SmallDateTime" CanBeNull="true" />
+      <Column Name="estado" Member="Estado" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="observaciones" Member="Observaciones" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" UpdateCheck="Never" />
+      <Association Name="FK_TTratamiento_THistorial" Member="THistorial" ThisKey="Id_historial" OtherKey="Id" Type="THistorial" IsForeignKey="true" DeleteOnNull="true" />
+      <Association Name="FK_TTratamiento_TTerapia" Member="TTerapia" ThisKey="Id_terapia" OtherKey="Id" Type="TTerapia" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

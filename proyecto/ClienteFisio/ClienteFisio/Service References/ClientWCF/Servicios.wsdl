@@ -1,0 +1,1483 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="Servicios" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:8000/ServerFisio?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:8000/ServerFisio?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" />
+      <xsd:import schemaLocation="http://localhost:8000/ServerFisio?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:8000/ServerFisio?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ServerFisio.DatosDB" />
+      <xsd:import schemaLocation="http://localhost:8000/ServerFisio?xsd=xsd4" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicios_registrarNuevoHist_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarNuevoHist" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarNuevoHist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarNuevoHistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarNuevoHist_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q1:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTratamientos_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarTratamientos" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTratamientos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarTratamientosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTratamientos_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q2="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q2:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarTratamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarTratamiento" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarTratamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarTratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarTratamiento_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q3="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q3:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarTratamiento_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q4="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q4:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarDiagnostico_InputMessage">
+    <wsdl:part name="parameters" element="tns:cerrarDiagnostico" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarDiagnostico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cerrarDiagnosticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarDiagnostico_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q5="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q5:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarDiagnostico_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q6="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q6:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifDiagnostico_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifDiagnostico" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifDiagnostico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifDiagnosticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifDiagnostico_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q7="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q7:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifDiagnostico_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q8="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q8:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSesionesTrat_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarSesionesTrat" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSesionesTrat_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarSesionesTratResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSesionesTrat_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q9="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q9:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifTratamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifTratamiento" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifTratamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifTratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifTratamiento_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q10="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q10:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifTratamiento_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q11="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q11:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarTratamiento_InputMessage">
+    <wsdl:part name="parameters" element="tns:cerrarTratamiento" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarTratamiento_OutputMessage">
+    <wsdl:part name="parameters" element="tns:cerrarTratamientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarTratamiento_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q12="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q12:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_cerrarTratamiento_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q13="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q13:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getTrataDiagAbiertos_InputMessage">
+    <wsdl:part name="parameters" element="tns:getTrataDiagAbiertos" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getTrataDiagAbiertos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getTrataDiagAbiertosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getTrataDiagAbiertos_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q14="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q14:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getNomDiag_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNomDiag" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getNomDiag_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNomDiagResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getNomDiag_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q15="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q15:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getNomTerap_InputMessage">
+    <wsdl:part name="parameters" element="tns:getNomTerap" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getNomTerap_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getNomTerapResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getNomTerap_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q16="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q16:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPaciente" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPaciente_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q17="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q17:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifSesion" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifSesion_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q18="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q18:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifSesion_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q19="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q19:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarSesion_InputMessage">
+    <wsdl:part name="parameters" element="tns:borrarSesion" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarSesion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:borrarSesionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarSesion_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q20="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q20:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarSesion_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q21="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q21:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPedidosMes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPedidosMes" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPedidosMes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPedidosMesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPedidosMes_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q22="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q22:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getSesionesMes_InputMessage">
+    <wsdl:part name="parameters" element="tns:getSesionesMes" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getSesionesMes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getSesionesMesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getSesionesMes_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q23="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q23:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getComentarios_InputMessage">
+    <wsdl:part name="parameters" element="tns:getComentarios" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getComentarios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getComentariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getComentarios_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q24="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q24:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCom_InputMessage">
+    <wsdl:part name="parameters" element="tns:borrarCom" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCom_OutputMessage">
+    <wsdl:part name="parameters" element="tns:borrarComResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCom_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q25="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q25:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCom_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q26="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q26:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_prueba_InputMessage">
+    <wsdl:part name="parameters" element="tns:prueba" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_prueba_OutputMessage">
+    <wsdl:part name="parameters" element="tns:pruebaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_enviarMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:enviarMail" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_enviarMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:enviarMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_enviarMail_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q27="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q27:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_login_InputMessage">
+    <wsdl:part name="parameters" element="tns:login" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_login_OutputMessage">
+    <wsdl:part name="parameters" element="tns:loginResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_login_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q28="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q28:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_login_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q29="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q29:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevoPaciente" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevoPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoPaciente_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q30="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q30:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoPaciente_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q31="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q31:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:borrarPaciente" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:borrarPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarPaciente_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q32="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q32:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarPaciente_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q33="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q33:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifPaciente_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifPaciente" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifPaciente_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifPacienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifPaciente_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q34="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q34:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifPaciente_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q35="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q35:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarPacientesConMail_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarPacientesConMail" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarPacientesConMail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarPacientesConMailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarPacientesConMail_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q36="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q36:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarPacientes_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarPacientes" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarPacientes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarPacientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarPacientes_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q37="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q37:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarMateriales_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarMateriales" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarMateriales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarMaterialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarMateriales_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q38="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q38:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:borrarMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:borrarMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarMaterial_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q39="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q39:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarMaterial_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q40="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q40:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_añadirMaterial_InputMessage">
+    <wsdl:part name="parameters" element="tns:añadirMaterial" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_añadirMaterial_OutputMessage">
+    <wsdl:part name="parameters" element="tns:añadirMaterialResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_añadirMaterial_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q41="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q41:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_añadirMaterial_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q42="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q42:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarPedido_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q43="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q43:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPedidos_InputMessage">
+    <wsdl:part name="parameters" element="tns:getPedidos" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPedidos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getPedidosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getPedidos_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q44="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q44:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarPedido_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarPedido" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarPedido_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarPedidoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarPedido_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q45="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q45:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarFisios_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarFisios" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarFisios_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarFisiosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarFisios_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q46="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q46:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoFisio_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevoFisio" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoFisio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevoFisioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoFisio_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q47="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q47:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoFisio_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q48="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q48:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarEmp_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarEmp" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarEmp_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarEmpResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarEmp_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q49="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q49:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifFisio_InputMessage">
+    <wsdl:part name="parameters" element="tns:modifFisio" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifFisio_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modifFisioResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifFisio_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q50="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q50:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modifFisio_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q51="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q51:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaSala_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevaSala" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaSala_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevaSalaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaSala_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q52="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q52:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaSala_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q53="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q53:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSalas_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarSalas" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSalas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarSalasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSalas_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q54="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q54:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarSalas_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q55="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q55:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarSala_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarSala" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarSala_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarSalaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarSala_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q56="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q56:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarSala_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q57="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q57:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarDiagnosticos_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarDiagnosticos" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarDiagnosticos_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarDiagnosticosResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarDiagnosticos_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q58="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q58:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarDiagnosticos_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q59="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q59:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarDiagnostico_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarDiagnostico" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarDiagnostico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarDiagnosticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarDiagnostico_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q60="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q60:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoDiagnostico_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevoDiagnostico" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoDiagnostico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevoDiagnosticoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoDiagnostico_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q61="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q61:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevoDiagnostico_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q62="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q62:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaTerapia_InputMessage">
+    <wsdl:part name="parameters" element="tns:nuevaTerapia" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaTerapia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:nuevaTerapiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaTerapia_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q63="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q63:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_nuevaTerapia_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q64="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q64:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTerapias_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarTerapias" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTerapias_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarTerapiasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTerapias_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q65="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q65:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarTerapias_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q66="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q66:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarTerapia_InputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTerapia" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarTerapia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:eliminarTerapiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_eliminarTerapia_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q67="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q67:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modificarTerapia_InputMessage">
+    <wsdl:part name="parameters" element="tns:modificarTerapia" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modificarTerapia_OutputMessage">
+    <wsdl:part name="parameters" element="tns:modificarTerapiaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_modificarTerapia_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q68="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q68:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getCitas_InputMessage">
+    <wsdl:part name="parameters" element="tns:getCitas" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getCitas_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getCitasResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_getCitas_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q69="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q69:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarCita_InputMessage">
+    <wsdl:part name="parameters" element="tns:registrarCita" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarCita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:registrarCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_registrarCita_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q70="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q70:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCita_InputMessage">
+    <wsdl:part name="parameters" element="tns:borrarCita" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCita_OutputMessage">
+    <wsdl:part name="parameters" element="tns:borrarCitaResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCita_ErrorFault_FaultMessage">
+    <wsdl:part xmlns:q71="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q71:Error" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_borrarCita_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q72="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q72:ErrorSql" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarHistoriales_InputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarHistoriales" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarHistoriales_OutputMessage">
+    <wsdl:part name="parameters" element="tns:recuperarHistorialesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicios_recuperarHistoriales_ErrorSqlFault_FaultMessage">
+    <wsdl:part xmlns:q73="http://schemas.datacontract.org/2004/07/ServerFisio.Excepciones" name="detail" element="q73:ErrorSql" />
+  </wsdl:message>
+  <wsdl:portType name="IServicios">
+    <wsdl:operation name="registrarNuevoHist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/registrarNuevoHist" message="tns:IServicios_registrarNuevoHist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/registrarNuevoHistResponse" message="tns:IServicios_registrarNuevoHist_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/registrarNuevoHistErrorFault" name="ErrorFault" message="tns:IServicios_registrarNuevoHist_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarTratamientos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarTratamientos" message="tns:IServicios_recuperarTratamientos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarTratamientosResponse" message="tns:IServicios_recuperarTratamientos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarTratamientosErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarTratamientos_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarTratamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/registrarTratamiento" message="tns:IServicios_registrarTratamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/registrarTratamientoResponse" message="tns:IServicios_registrarTratamiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/registrarTratamientoErrorFault" name="ErrorFault" message="tns:IServicios_registrarTratamiento_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/registrarTratamientoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_registrarTratamiento_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cerrarDiagnostico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/cerrarDiagnostico" message="tns:IServicios_cerrarDiagnostico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/cerrarDiagnosticoResponse" message="tns:IServicios_cerrarDiagnostico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/cerrarDiagnosticoErrorFault" name="ErrorFault" message="tns:IServicios_cerrarDiagnostico_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/cerrarDiagnosticoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_cerrarDiagnostico_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifDiagnostico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/modifDiagnostico" message="tns:IServicios_modifDiagnostico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/modifDiagnosticoResponse" message="tns:IServicios_modifDiagnostico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifDiagnosticoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_modifDiagnostico_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifDiagnosticoErrorFault" name="ErrorFault" message="tns:IServicios_modifDiagnostico_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSesionesTrat">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarSesionesTrat" message="tns:IServicios_recuperarSesionesTrat_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarSesionesTratResponse" message="tns:IServicios_recuperarSesionesTrat_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarSesionesTratErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarSesionesTrat_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifTratamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/modifTratamiento" message="tns:IServicios_modifTratamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/modifTratamientoResponse" message="tns:IServicios_modifTratamiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifTratamientoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_modifTratamiento_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifTratamientoErrorFault" name="ErrorFault" message="tns:IServicios_modifTratamiento_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="cerrarTratamiento">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/cerrarTratamiento" message="tns:IServicios_cerrarTratamiento_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/cerrarTratamientoResponse" message="tns:IServicios_cerrarTratamiento_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/cerrarTratamientoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_cerrarTratamiento_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/cerrarTratamientoErrorFault" name="ErrorFault" message="tns:IServicios_cerrarTratamiento_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getTrataDiagAbiertos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getTrataDiagAbiertos" message="tns:IServicios_getTrataDiagAbiertos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getTrataDiagAbiertosResponse" message="tns:IServicios_getTrataDiagAbiertos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getTrataDiagAbiertosErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getTrataDiagAbiertos_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNomDiag">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getNomDiag" message="tns:IServicios_getNomDiag_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getNomDiagResponse" message="tns:IServicios_getNomDiag_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getNomDiagErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getNomDiag_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getNomTerap">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getNomTerap" message="tns:IServicios_getNomTerap_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getNomTerapResponse" message="tns:IServicios_getNomTerap_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getNomTerapErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getNomTerap_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPaciente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getPaciente" message="tns:IServicios_getPaciente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getPacienteResponse" message="tns:IServicios_getPaciente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getPacienteErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getPaciente_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/modifSesion" message="tns:IServicios_modifSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/modifSesionResponse" message="tns:IServicios_modifSesion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifSesionErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_modifSesion_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifSesionErrorFault" name="ErrorFault" message="tns:IServicios_modifSesion_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrarSesion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/borrarSesion" message="tns:IServicios_borrarSesion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/borrarSesionResponse" message="tns:IServicios_borrarSesion_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarSesionErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_borrarSesion_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarSesionErrorFault" name="ErrorFault" message="tns:IServicios_borrarSesion_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPedidosMes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getPedidosMes" message="tns:IServicios_getPedidosMes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getPedidosMesResponse" message="tns:IServicios_getPedidosMes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getPedidosMesErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getPedidosMes_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getSesionesMes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getSesionesMes" message="tns:IServicios_getSesionesMes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getSesionesMesResponse" message="tns:IServicios_getSesionesMes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getSesionesMesErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getSesionesMes_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getComentarios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getComentarios" message="tns:IServicios_getComentarios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getComentariosResponse" message="tns:IServicios_getComentarios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getComentariosErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getComentarios_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrarCom">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/borrarCom" message="tns:IServicios_borrarCom_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/borrarComResponse" message="tns:IServicios_borrarCom_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarComErrorFault" name="ErrorFault" message="tns:IServicios_borrarCom_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarComErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_borrarCom_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="prueba">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/prueba" message="tns:IServicios_prueba_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/pruebaResponse" message="tns:IServicios_prueba_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="enviarMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/enviarMail" message="tns:IServicios_enviarMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/enviarMailResponse" message="tns:IServicios_enviarMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/enviarMailErrorFault" name="ErrorFault" message="tns:IServicios_enviarMail_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/login" message="tns:IServicios_login_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/loginResponse" message="tns:IServicios_login_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/loginErrorFault" name="ErrorFault" message="tns:IServicios_login_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/loginErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_login_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoPaciente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/nuevoPaciente" message="tns:IServicios_nuevoPaciente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/nuevoPacienteResponse" message="tns:IServicios_nuevoPaciente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevoPacienteErrorFault" name="ErrorFault" message="tns:IServicios_nuevoPaciente_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevoPacienteErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_nuevoPaciente_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrarPaciente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/borrarPaciente" message="tns:IServicios_borrarPaciente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/borrarPacienteResponse" message="tns:IServicios_borrarPaciente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarPacienteErrorFault" name="ErrorFault" message="tns:IServicios_borrarPaciente_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarPacienteErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_borrarPaciente_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifPaciente">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/modifPaciente" message="tns:IServicios_modifPaciente_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/modifPacienteResponse" message="tns:IServicios_modifPaciente_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifPacienteErrorFault" name="ErrorFault" message="tns:IServicios_modifPaciente_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifPacienteErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_modifPaciente_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarPacientesConMail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarPacientesConMail" message="tns:IServicios_recuperarPacientesConMail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarPacientesConMailResponse" message="tns:IServicios_recuperarPacientesConMail_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarPacientesConMailErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarPacientesConMail_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarPacientes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarPacientes" message="tns:IServicios_recuperarPacientes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarPacientesResponse" message="tns:IServicios_recuperarPacientes_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarPacientesErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarPacientes_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarMateriales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarMateriales" message="tns:IServicios_recuperarMateriales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarMaterialesResponse" message="tns:IServicios_recuperarMateriales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarMaterialesErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarMateriales_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrarMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/borrarMaterial" message="tns:IServicios_borrarMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/borrarMaterialResponse" message="tns:IServicios_borrarMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarMaterialErrorFault" name="ErrorFault" message="tns:IServicios_borrarMaterial_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarMaterialErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_borrarMaterial_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="añadirMaterial">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/añadirMaterial" message="tns:IServicios_añadirMaterial_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/añadirMaterialResponse" message="tns:IServicios_añadirMaterial_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/añadirMaterialErrorFault" name="ErrorFault" message="tns:IServicios_añadirMaterial_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/añadirMaterialErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_añadirMaterial_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/registrarPedido" message="tns:IServicios_registrarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/registrarPedidoResponse" message="tns:IServicios_registrarPedido_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/registrarPedidoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_registrarPedido_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getPedidos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getPedidos" message="tns:IServicios_getPedidos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getPedidosResponse" message="tns:IServicios_getPedidos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getPedidosErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getPedidos_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarPedido">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/eliminarPedido" message="tns:IServicios_eliminarPedido_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/eliminarPedidoResponse" message="tns:IServicios_eliminarPedido_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/eliminarPedidoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_eliminarPedido_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarFisios">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarFisios" message="tns:IServicios_recuperarFisios_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarFisiosResponse" message="tns:IServicios_recuperarFisios_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarFisiosErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarFisios_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoFisio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/nuevoFisio" message="tns:IServicios_nuevoFisio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/nuevoFisioResponse" message="tns:IServicios_nuevoFisio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevoFisioErrorFault" name="ErrorFault" message="tns:IServicios_nuevoFisio_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevoFisioErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_nuevoFisio_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarEmp">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/eliminarEmp" message="tns:IServicios_eliminarEmp_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/eliminarEmpResponse" message="tns:IServicios_eliminarEmp_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/eliminarEmpErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_eliminarEmp_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modifFisio">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/modifFisio" message="tns:IServicios_modifFisio_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/modifFisioResponse" message="tns:IServicios_modifFisio_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifFisioErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_modifFisio_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modifFisioErrorFault" name="ErrorFault" message="tns:IServicios_modifFisio_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevaSala">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/nuevaSala" message="tns:IServicios_nuevaSala_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/nuevaSalaResponse" message="tns:IServicios_nuevaSala_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevaSalaErrorFault" name="ErrorFault" message="tns:IServicios_nuevaSala_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevaSalaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_nuevaSala_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSalas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarSalas" message="tns:IServicios_recuperarSalas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarSalasResponse" message="tns:IServicios_recuperarSalas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarSalasErrorFault" name="ErrorFault" message="tns:IServicios_recuperarSalas_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarSalasErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarSalas_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarSala">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/eliminarSala" message="tns:IServicios_eliminarSala_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/eliminarSalaResponse" message="tns:IServicios_eliminarSala_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/eliminarSalaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_eliminarSala_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/eliminarSalaErrorFault" name="ErrorFault" message="tns:IServicios_eliminarSala_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDiagnosticos">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarDiagnosticos" message="tns:IServicios_recuperarDiagnosticos_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarDiagnosticosResponse" message="tns:IServicios_recuperarDiagnosticos_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarDiagnosticosErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarDiagnosticos_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarDiagnosticosErrorFault" name="ErrorFault" message="tns:IServicios_recuperarDiagnosticos_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarDiagnostico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/eliminarDiagnostico" message="tns:IServicios_eliminarDiagnostico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/eliminarDiagnosticoResponse" message="tns:IServicios_eliminarDiagnostico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/eliminarDiagnosticoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_eliminarDiagnostico_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevoDiagnostico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/nuevoDiagnostico" message="tns:IServicios_nuevoDiagnostico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/nuevoDiagnosticoResponse" message="tns:IServicios_nuevoDiagnostico_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevoDiagnosticoErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_nuevoDiagnostico_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevoDiagnosticoErrorFault" name="ErrorFault" message="tns:IServicios_nuevoDiagnostico_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="nuevaTerapia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/nuevaTerapia" message="tns:IServicios_nuevaTerapia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/nuevaTerapiaResponse" message="tns:IServicios_nuevaTerapia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevaTerapiaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_nuevaTerapia_ErrorSqlFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/nuevaTerapiaErrorFault" name="ErrorFault" message="tns:IServicios_nuevaTerapia_ErrorFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarTerapias">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarTerapias" message="tns:IServicios_recuperarTerapias_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarTerapiasResponse" message="tns:IServicios_recuperarTerapias_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarTerapiasErrorFault" name="ErrorFault" message="tns:IServicios_recuperarTerapias_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarTerapiasErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarTerapias_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTerapia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/eliminarTerapia" message="tns:IServicios_eliminarTerapia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/eliminarTerapiaResponse" message="tns:IServicios_eliminarTerapia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/eliminarTerapiaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_eliminarTerapia_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="modificarTerapia">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/modificarTerapia" message="tns:IServicios_modificarTerapia_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/modificarTerapiaResponse" message="tns:IServicios_modificarTerapia_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/modificarTerapiaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_modificarTerapia_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getCitas">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/getCitas" message="tns:IServicios_getCitas_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/getCitasResponse" message="tns:IServicios_getCitas_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/getCitasErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_getCitas_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="registrarCita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/registrarCita" message="tns:IServicios_registrarCita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/registrarCitaResponse" message="tns:IServicios_registrarCita_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/registrarCitaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_registrarCita_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="borrarCita">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/borrarCita" message="tns:IServicios_borrarCita_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/borrarCitaResponse" message="tns:IServicios_borrarCita_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarCitaErrorFault" name="ErrorFault" message="tns:IServicios_borrarCita_ErrorFault_FaultMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/borrarCitaErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_borrarCita_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="recuperarHistoriales">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicios/recuperarHistoriales" message="tns:IServicios_recuperarHistoriales_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicios/recuperarHistorialesResponse" message="tns:IServicios_recuperarHistoriales_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IServicios/recuperarHistorialesErrorSqlFault" name="ErrorSqlFault" message="tns:IServicios_recuperarHistoriales_ErrorSqlFault_FaultMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IServicios" type="tns:IServicios">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="registrarNuevoHist">
+      <soap:operation soapAction="http://tempuri.org/IServicios/registrarNuevoHist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarTratamientos">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarTratamientos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registrarTratamiento">
+      <soap:operation soapAction="http://tempuri.org/IServicios/registrarTratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cerrarDiagnostico">
+      <soap:operation soapAction="http://tempuri.org/IServicios/cerrarDiagnostico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifDiagnostico">
+      <soap:operation soapAction="http://tempuri.org/IServicios/modifDiagnostico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSesionesTrat">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarSesionesTrat" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifTratamiento">
+      <soap:operation soapAction="http://tempuri.org/IServicios/modifTratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="cerrarTratamiento">
+      <soap:operation soapAction="http://tempuri.org/IServicios/cerrarTratamiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTrataDiagAbiertos">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getTrataDiagAbiertos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getNomDiag">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getNomDiag" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getNomTerap">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getNomTerap" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPaciente">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifSesion">
+      <soap:operation soapAction="http://tempuri.org/IServicios/modifSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarSesion">
+      <soap:operation soapAction="http://tempuri.org/IServicios/borrarSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPedidosMes">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getPedidosMes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getSesionesMes">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getSesionesMes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getComentarios">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getComentarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarCom">
+      <soap:operation soapAction="http://tempuri.org/IServicios/borrarCom" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="prueba">
+      <soap:operation soapAction="http://tempuri.org/IServicios/prueba" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="enviarMail">
+      <soap:operation soapAction="http://tempuri.org/IServicios/enviarMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="login">
+      <soap:operation soapAction="http://tempuri.org/IServicios/login" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoPaciente">
+      <soap:operation soapAction="http://tempuri.org/IServicios/nuevoPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarPaciente">
+      <soap:operation soapAction="http://tempuri.org/IServicios/borrarPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifPaciente">
+      <soap:operation soapAction="http://tempuri.org/IServicios/modifPaciente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarPacientesConMail">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarPacientesConMail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarPacientes">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarPacientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarMateriales">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarMateriales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarMaterial">
+      <soap:operation soapAction="http://tempuri.org/IServicios/borrarMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="añadirMaterial">
+      <soap:operation soapAction="http://tempuri.org/IServicios/añadirMaterial" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registrarPedido">
+      <soap:operation soapAction="http://tempuri.org/IServicios/registrarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getPedidos">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getPedidos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarPedido">
+      <soap:operation soapAction="http://tempuri.org/IServicios/eliminarPedido" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarFisios">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarFisios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoFisio">
+      <soap:operation soapAction="http://tempuri.org/IServicios/nuevoFisio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarEmp">
+      <soap:operation soapAction="http://tempuri.org/IServicios/eliminarEmp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modifFisio">
+      <soap:operation soapAction="http://tempuri.org/IServicios/modifFisio" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nuevaSala">
+      <soap:operation soapAction="http://tempuri.org/IServicios/nuevaSala" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarSalas">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarSalas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarSala">
+      <soap:operation soapAction="http://tempuri.org/IServicios/eliminarSala" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarDiagnosticos">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarDiagnosticos" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarDiagnostico">
+      <soap:operation soapAction="http://tempuri.org/IServicios/eliminarDiagnostico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nuevoDiagnostico">
+      <soap:operation soapAction="http://tempuri.org/IServicios/nuevoDiagnostico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="nuevaTerapia">
+      <soap:operation soapAction="http://tempuri.org/IServicios/nuevaTerapia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarTerapias">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarTerapias" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="eliminarTerapia">
+      <soap:operation soapAction="http://tempuri.org/IServicios/eliminarTerapia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="modificarTerapia">
+      <soap:operation soapAction="http://tempuri.org/IServicios/modificarTerapia" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getCitas">
+      <soap:operation soapAction="http://tempuri.org/IServicios/getCitas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="registrarCita">
+      <soap:operation soapAction="http://tempuri.org/IServicios/registrarCita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="borrarCita">
+      <soap:operation soapAction="http://tempuri.org/IServicios/borrarCita" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorFault">
+        <soap:fault use="literal" name="ErrorFault" namespace="" />
+      </wsdl:fault>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="recuperarHistoriales">
+      <soap:operation soapAction="http://tempuri.org/IServicios/recuperarHistoriales" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ErrorSqlFault">
+        <soap:fault use="literal" name="ErrorSqlFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Servicios">
+    <wsdl:port name="BasicHttpBinding_IServicios" binding="tns:BasicHttpBinding_IServicios">
+      <soap:address location="http://localhost:8000/ServerFisio/Servicios" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

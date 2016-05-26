@@ -1,0 +1,29 @@
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Debug\ServerFisio.exe.config
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Debug\ServerFisio.exe
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Debug\ServerFisio.pdb
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Interfaz.VServidor.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Properties.Resources.resources
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.csproj.GenerateResource.Cache
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.exe
+C:\Documents and Settings\Xabi\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.pdb
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\bin\Debug\ServerFisio.exe.config
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ServerFisio.exe
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ServerFisio.pdb
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\bin\Debug\ServerFisio.exe
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\bin\Debug\ServerFisio.pdb
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ResolveAssemblyReference.cache
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Interfaz.VServidor.resources
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Properties.Resources.resources
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ServerFisio.csproj.GenerateResource.Cache
+L:\Proy Fin Carrera\Programa\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Interfaz.VConfig.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Debug\ServerFisio.exe.config
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Debug\ServerFisio.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\bin\Debug\ServerFisio.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Interfaz.VConfig.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Interfaz.VServidor.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.Properties.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ServerFisio\ServerFisio\obj\Debug\ServerFisio.csproj.GenerateResource.Cache

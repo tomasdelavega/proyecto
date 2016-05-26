@@ -1,0 +1,136 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.Pacientes.VPacientes"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/people.png"
+    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    Title="Pacientes" Height="713" Width="671" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" Closing="Window_Closing" Loaded="Window_Loaded">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+            <GradientStop Color="#FFFFE07E" Offset="0"/>
+            <GradientStop Color="#FFFFFAEA" Offset="1"/>
+        </LinearGradientBrush>
+
+    </Window.Background>
+    <Window.Resources>
+        <DataTemplate x:Key="BlueHeader">
+            <StackPanel Orientation="Horizontal" Margin="-5,-5,-5,-5" Width="1000">
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF223B84" Offset="1"/>
+                        <GradientStop Color="#FF57A0F4" Offset="0.5"/>
+                        <GradientStop Color="#FF4B94EC" Offset="0.5"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+                <TextBlock Margin="10,10,10,10" Text="{Binding}" VerticalAlignment="Center" Foreground="White"/>
+            </StackPanel>
+        </DataTemplate>
+    </Window.Resources>
+    <Grid>
+        <ListView ItemsSource="{Binding PacientesCollection}" ItemTemplate="{DynamicResource CustomerTemplate}" Name="listViewPac" Margin="32,58,185,0" Height="124" VerticalAlignment="Top" SelectionChanged="listViewPac_SelectionChanged" >
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="180" Header="Apellidos" DisplayMemberBinding="{Binding Apellidos}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    <GridViewColumn Width="150" Header="Nombre" DisplayMemberBinding="{Binding Nombre}" HeaderTemplate="{StaticResource BlueHeader}"/> 
+                    <GridViewColumn Width="120" Header="DNI" DisplayMemberBinding="{Binding Dni}" HeaderTemplate="{StaticResource BlueHeader}" />
+                </GridView>
+            </ListView.View>
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                    <GradientStop Color="#FFFFE07E" Offset="0"/>
+                    <GradientStop Color="#FFFFFAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}" >
+                    <Setter Property="Height" Value="24" />
+                    <Setter Property="Background" Value="#5EF4E057" />
+                    <Setter Property="Foreground" Value="#FF4B94EC"/>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="DarkBlue" />
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFFFC704" Offset="0.986"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.5"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.51"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        
+        <Button Height="27" HorizontalAlignment="Right" Margin="0,58,92,0" Name="btnAñadirPac" VerticalAlignment="Top" Width="87" Click="btnAñadirPac_Click">Nuevo Paciente</Button>
+        <Button Height="23" Margin="0,0,12,11" Name="btnVolver" VerticalAlignment="Bottom" Click="btnVolver_Click" HorizontalAlignment="Right" Width="63">Volver</Button>
+        <Label HorizontalAlignment="Left" Margin="32,188,0,0" Name="lblTfno" Width="66" Height="24" VerticalAlignment="Top">Teléfono:</Label>
+        <Label Height="24" Margin="115,188,303,0" Name="lblTfno2" VerticalAlignment="Top"></Label>
+        <Label Height="24" HorizontalAlignment="Left" Margin="32,213,0,0" Name="lblMovil" VerticalAlignment="Top" Width="66">Movil:</Label>
+        <Label Height="24" Margin="115,213,293,0" Name="lblMovil2" VerticalAlignment="Top"></Label>
+        <Label Height="24" HorizontalAlignment="Left" Margin="32,236,0,0" Name="lblMail" VerticalAlignment="Top" Width="66">eMail:</Label>
+        <Label Height="24" Margin="115,236,293,0" Name="lblEmail2" VerticalAlignment="Top"></Label>
+        <Label HorizontalAlignment="Left" Margin="32,261,0,0" Name="lblFnac" Width="66" Height="23" VerticalAlignment="Top">Fcha nto:</Label>
+        <Label Margin="115,261,293,0" Name="lblfe2" Height="23" VerticalAlignment="Top"></Label>
+        <Label Height="29" Margin="166,21,185,0" Name="lblAvisos" VerticalAlignment="Top" HorizontalContentAlignment="Right" FontSize="15" Foreground="Red"></Label>
+        <Button HorizontalAlignment="Right" Margin="0,188,187,0" Name="btnEliminar" Width="53" Click="btnEliminar_Click" Height="24" VerticalAlignment="Top">Eliminar</Button>
+        <Button Margin="0,188,247,0" Name="btnModificar" Click="btnModificar_Click" Height="24" VerticalAlignment="Top" HorizontalAlignment="Right" Width="53">Modificar</Button>
+
+        <ListView ItemsSource="{Binding HistCollection}" ItemTemplate="{DynamicResource CustomerTemplate}" Name="listViewHist" Margin="32,0,12,131" Height="121" VerticalAlignment="Bottom" SelectionChanged="listViewHist_SelectionChanged" MouseDown="listViewHist_MouseDown">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Diagnóstico" DisplayMemberBinding="{Binding Diagnostico}" HeaderTemplate="{StaticResource BlueHeader}" />   
+                    
+                    <GridViewColumn Width="140" Header="Zona" DisplayMemberBinding="{Binding Zona}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    <GridViewColumn Width="100" Header="Estado" DisplayMemberBinding="{Binding Estado}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    <GridViewColumn Width="112" Header="Fcha Inicio" DisplayMemberBinding="{Binding FInicio}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    <GridViewColumn Width="112" Header="Fcha Fin" DisplayMemberBinding="{Binding FFin}" HeaderTemplate="{StaticResource BlueHeader}" />
+                    
+                    
+                </GridView>
+            </ListView.View>
+            <ListView.Background>
+                <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+                    <GradientStop Color="#FFFFE07E" Offset="0"/>
+                    <GradientStop Color="#FFFFFAEA" Offset="1"/>
+                </LinearGradientBrush>
+            </ListView.Background>
+            <ListView.ItemContainerStyle>
+                <Style TargetType="{x:Type ListViewItem}" >
+                    <Setter Property="Height" Value="24" />
+                    <Setter Property="Background" Value="#5EF4E057" />
+                    <Setter Property="Foreground" Value="#FF4B94EC"/>
+
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter Property="Foreground" Value="DarkBlue" />
+                            <Setter Property="Background">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFFFC704" Offset="0.986"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.5"/>
+                                        <GradientStop Color="#FFF4E057" Offset="0.51"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                    </Style.Triggers>
+                </Style>
+            </ListView.ItemContainerStyle>
+        </ListView>
+        <Label Height="33" Margin="32,0,102,259" Name="lblHistTit" VerticalAlignment="Bottom" FontSize="20"></Label>
+        <Label Height="28" Margin="32,0,12,46" Name="lblAvisos2" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" Foreground="Red" FontSize="15"></Label>
+        <TextBox Margin="32,316,293,0" Name="txtObsPaciente" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" IsEnabled="True" IsReadOnly="True" Height="57" VerticalAlignment="Top" />
+        <Label Height="24" Margin="32,285,0,0" Name="lblObsPaciente" VerticalAlignment="Top" HorizontalAlignment="Left" Width="89">Observaciones:</Label>
+        <Button Height="39" HorizontalAlignment="Left" Margin="32,0,0,82" Name="btnAgregarHist" VerticalAlignment="Bottom" Width="107" Click="btnAgregarHist_Click">Diagnosticar</Button>
+        <Label Height="39" Margin="32,11,187,0" Name="label1" VerticalAlignment="Top" FontSize="25">Pacientes</Label>
+        <Image Source="/data/images/Application.png" HorizontalAlignment="Right" Margin="0,0,12,259" Name="image1" Stretch="Fill" Width="76" Height="57" VerticalAlignment="Bottom">
+            
+        </Image>
+    </Grid>
+    
+</Window>

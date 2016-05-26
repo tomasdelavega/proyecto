@@ -1,0 +1,238 @@
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe.config
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\Vterapias.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\Vterapias.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\App.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio_MarkupCompile.cache
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe.config
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.pdb
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.Design.dll
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.dll
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.VisualStudio.Design.dll
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.Design.pdb
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.VisualStudio.Design.pdb
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.pdb
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\VTerapias.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.baml
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\VTerapias.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\App.g.cs
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio_MarkupCompile.cache
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.g.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.Properties.Resources.resources
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.csproj.GenerateResource.Cache
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.exe
+C:\Documents and Settings\Asier\Escritorio\casi def junio\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.Design.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.VisualStudio.Design.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.pdb
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.baml
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.g.cs
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.g.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.Properties.Resources.resources
+C:\Documents and Settings\Administrador\Mis documentos\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.csproj.GenerateResource.Cache
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe.config
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.exe
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.pdb
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.pdb
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.Design.dll
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.dll
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.VisualStudio.Design.dll
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.Design.pdb
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.VisualStudio.Design.pdb
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.pdb
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ResolveAssemblyReference.cache
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\VTerapias.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.baml
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\VTerapias.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\App.g.cs
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio_MarkupCompile.cache
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.g.resources
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.Properties.Resources.resources
+E:\Visual Studio 2008\Projects\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.csproj.GenerateResource.Cache
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe.config
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.exe
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.pdb
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ResolveAssemblyReference.cache
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\VTerapias.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.baml
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VComentarios.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfigCon.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VCuentas.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Citas\VCitas.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Diagnosticos\Vdiagnosticos.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Empleados\VFisios.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Mails\VMails.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VMateriales.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Materiales\VPedidos.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VAñadirPaciente.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VHistorial.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VModifPaciente.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoHist.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VNuevoTratamiento.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VPacientes.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VSesion.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Pacientes\VTratamiento.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Salas\VSalas.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\Terapias\VTerapias.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VLogin.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VConfig.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\Interfaz\VPrincipal.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\App.g.cs
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio_MarkupCompile.cache
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.g.resources
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.Properties.Resources.resources
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\obj\Release\ClienteFisio.csproj.GenerateResource.Cache
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.exe
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\bin\Release\ClienteFisio.pdb
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.Design.pdb
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.VisualStudio.Design.pdb
+E:\CLASE\Proyecto\ClienteFisio\ClienteFisio\bin\Release\WPFToolkit.pdb

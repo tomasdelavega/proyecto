@@ -1,0 +1,34 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.Terapias.VTerapias"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/terapia.png"
+    Title="Terapias" Height="443" Width="381" Loaded="Window_Loaded" Closing="Window_Closing" WindowStartupLocation="CenterOwner" ResizeMode="NoResize">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+            <GradientStop Color="#FFFFE07E" Offset="0"/>
+            <GradientStop Color="#FFFFFAEA" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="290*" />
+            
+        </Grid.ColumnDefinitions>
+        <Button Height="23" HorizontalAlignment="Right" Margin="0,0,11,16" Name="btnSalir" VerticalAlignment="Bottom" Width="82" Click="btnSalir_Click" TabIndex="10">Volver</Button>
+        <Button Height="26" HorizontalAlignment="Left" Margin="12,0,0,100" Name="btnAgregar" VerticalAlignment="Bottom" Width="70" Click="btnAgregar_Click" TabIndex="7">Agregar</Button>
+        <Button Height="26" Margin="0,8,11,0" Name="btneliminar" VerticalAlignment="Top" Click="btneliminar_Click" HorizontalAlignment="Right" Width="48" TabIndex="9">Eliminar</Button>
+        <Label Height="24" HorizontalAlignment="Left" Margin="12,68,0,0" Name="lblNombre" VerticalAlignment="Top" Width="52">Nombre</Label>
+        <TextBox Height="24" Margin="83,68,72.844,0" Name="txtnombre" VerticalAlignment="Top" TabIndex="2" />
+        <Label Height="24" HorizontalAlignment="Left" Margin="12,98,0,0" Name="lblNumsesiones" VerticalAlignment="Top" Width="70">Nº Sesiones</Label>
+        <TextBox Height="24" Margin="83,98,0,0" Name="txtNums" VerticalAlignment="Top" HorizontalAlignment="Left" Width="65" TabIndex="3" />
+        <Label HorizontalAlignment="Left" Margin="12,152,0,0" Name="lblDescripcion" Width="75" Height="24" VerticalAlignment="Top">Descripción</Label>
+        <TextBox Margin="12,179,11,131" Name="txtdescripcion" AcceptsReturn="True" AcceptsTab="True" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" TabIndex="6" />
+        <ComboBox Height="25" Margin="83,8,0,0" Name="comboTerapias" VerticalAlignment="Top" HorizontalAlignment="Left" Width="203.156" SelectionChanged="comboTerapias_SelectionChanged" TabIndex="1" />
+        <Label Height="25
+               " Margin="12,0,11,63" Name="lblmensaje" VerticalAlignment="Bottom" Foreground="Red" FontSize="13" HorizontalContentAlignment="Center"></Label>
+        <Button Height="26" Margin="0,0,11,100" Name="btnModificar" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="69.844" Click="btnModificar_Click" TabIndex="8">Modificar</Button>
+        <TextBox Height="24" Margin="83,128,0,0" Name="txtImagen" VerticalAlignment="Top" TabIndex="4" HorizontalAlignment="Left" Width="120" />
+        <Label Height="24" HorizontalAlignment="Left" Margin="12,128,0,0" Name="lnlImagen" VerticalAlignment="Top" Width="65">Imagen</Label>
+        <Button Height="24" HorizontalAlignment="Right" Margin="0,128,105,0" Name="btnBuscarImg" VerticalAlignment="Top" Width="45" Click="btnBuscarImg_Click" TabIndex="5">Buscar</Button>
+    </Grid>
+</Window>

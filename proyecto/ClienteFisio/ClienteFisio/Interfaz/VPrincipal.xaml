@@ -1,0 +1,149 @@
+﻿<Window x:Class="ClienteFisio.Interfaz.VPrincipal"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="/data/images/logo_mini.gif"
+    Title="" Height="510" Width="822" WindowStartupLocation="CenterScreen" Loaded="Window_Loaded" ShowActivated="True" ResizeMode="NoResize" Focusable="False">
+    <Grid>
+        <Button Height="60" Margin="52,61,0,0" Name="btnPacientes" VerticalAlignment="Top" Click="btnPacientes_Click" HorizontalAlignment="Left" Width="80">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/people.png">
+                    
+                </ImageBrush>
+            </Button.Background>
+           
+        </Button>
+        
+       <Button HorizontalAlignment="Left" Margin="52,131,0,0" Name="btnMails" Width="80" Click="button1_Click" Height="60" VerticalAlignment="Top">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Edit Email.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Height="40.016" Margin="418,0,0,90.984" Name="btnMateriales" VerticalAlignment="Bottom" Click="btnMateriales_Click" HorizontalAlignment="Left" Width="75">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Mats.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="52,0,0,91" Name="btnPedidos" Click="btnPedidos_Click" Height="40.016" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/001_shoppingcart_empty.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="52,0,0,36.558" Name="btnEmpleados" Click="btnEmpleados_Click" Height="41.442" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="80">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Medical  Student 2.png">
+
+                </ImageBrush>
+            </Button.Background>
+       
+        </Button>
+        <Button Margin="239,0,0,91" Name="btnSalas" Click="btnSalas_Click" Height="40.016" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/sala.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="239,0,0,36.558" Name="btnTerapias" Click="btnTerapias_Click" Height="41.442" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/terapia.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="418,0,0,36.558" Name="btnDiagnosticos" Click="btnDiagnosticos_Click" Height="41.442" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="75">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/diag.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Button Margin="52,201,0,211" Name="btnCitas" Click="btnCitas_Click" HorizontalAlignment="Left" Width="80">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Calendar.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Menu Height="22" Name="menu1" VerticalAlignment="Top">
+            <MenuItem Header="Pacientes">
+                <MenuItem Header="Nuevo paciente" Click="itemNPaciente_Click"/>
+                <MenuItem Header="Historiales" Click="itemHist_Click"/>
+                <MenuItem Header="Citaciones" Click="itemCit_Click"/>
+     
+            </MenuItem>
+            <MenuItem Header="Pedidos">
+              
+                <MenuItem Header="Registrar pedidos" Click="itemRegPeds_Click"/>
+            
+
+            </MenuItem>
+            <MenuItem Header="Mensajería">
+                <MenuItem Header="Enviar eMail" Click="itemEmail_Click"/>
+               
+
+
+            </MenuItem>
+            <MenuItem Header="Configuración">
+                <MenuItem Header="Materiales" Click="itemMat_Click"/>
+                <MenuItem Header="Salas" Click="itemSalas_Click"/>
+                <MenuItem Header="Empleados" Click="itemEmps_Click"/>
+                <MenuItem Header="Diagnósticos" Click="itemDiags_Click"/>
+                <MenuItem Header="Terapias" Click="itemTeraps_Click"/>
+                <MenuItem Header="Precios" Click="itemOtros_Click"/>
+                <MenuItem Header="Conexión" Click="itemCon_Click"/>
+
+
+
+            </MenuItem>
+        </Menu>
+        <Label Height="60" Margin="138,61,0,0" Name="label1" VerticalAlignment="Top" HorizontalAlignment="Left" Width="193" FontSize="20" VerticalContentAlignment="Center">Área de pacientes</Label>
+        <Label FontSize="20" Height="60" Margin="138,131,297,0" Name="label2" VerticalAlignment="Top" VerticalContentAlignment="Center">Envio de correos electrónicos</Label>
+        <Label FontSize="20" Margin="138,201,297,211" Name="label3" VerticalContentAlignment="Center">Citaciones</Label>
+        <Label FontSize="15" Margin="138,0,0,91" Name="label4" VerticalContentAlignment="Center" Height="40" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="100">Pedidos</Label>
+        <Button HorizontalAlignment="Right" Margin="0,211,28,211" Name="btnsalir" Width="50" Click="btnsalir_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Shutdown.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label FontSize="15" Height="37.016" Margin="138,0,0,40.984" Name="label5" VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="100">Empleados</Label>
+        <Button Margin="0,0,125,90.984" Name="btnCuentas" Click="btnCuentas_Click" Height="40.016" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="75">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/vault.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label FontSize="15" Margin="0,0,28,90.923" Name="label6" VerticalContentAlignment="Center" Height="40.077" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="88">Cuentas</Label>
+        <Label Margin="319,0,382,38.039" Name="label7" HorizontalContentAlignment="Left" VerticalContentAlignment="Center" FontSize="15" Height="37" VerticalAlignment="Bottom">Terapias</Label>
+        <Label FontSize="15" HorizontalContentAlignment="Left" Margin="0,0,382,92.47" Name="label8" VerticalContentAlignment="Center" Height="40.016" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="99">Salas</Label>
+        <Label FontSize="15" Height="39.961" HorizontalContentAlignment="Left" Margin="0,0,202,38.039" Name="label9" VerticalAlignment="Bottom" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="100">Diagnósticos</Label>
+        <Label FontSize="15" Height="37.077" HorizontalContentAlignment="Left" Margin="0,340.984,202,0" Name="label10" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalAlignment="Right" Width="100">Materiales</Label>
+        <Image Source="/data/images/masthead.jpg" HorizontalAlignment="Right" Margin="0,61,28,0" Name="image1" Stretch="Fill" Width="200" Height="130" VerticalAlignment="Top" />
+        <Label Height="22" Margin="0,0,28,187" Name="label11" VerticalAlignment="Bottom" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Width="50" VerticalContentAlignment="Center">Salir</Label>
+        <Button HorizontalAlignment="Left" Margin="52,0,0,141" Name="button1" Width="80" Height="60" VerticalAlignment="Bottom" Click="button1_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/data/images/Chat.png">
+
+                </ImageBrush>
+            </Button.Background>
+        </Button>
+        <Label FontSize="20" Height="60" HorizontalAlignment="Left" Margin="138,0,0,139" Name="label12" VerticalAlignment="Bottom" VerticalContentAlignment="Center" Width="141">Comentarios</Label>
+        <TextBlock Height="21" HorizontalAlignment="Right" Margin="0,0,28,13" Name="textBlock1" VerticalAlignment="Bottom" Width="66">
+            <Hyperlink Click="Hyperlink_Click">Cerrar sesión</Hyperlink>
+            </TextBlock>
+    </Grid>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.939,0.919" StartPoint="0.061,0.081">
+            <GradientStop Color="#FFFFE07E" Offset="0"/>
+            <GradientStop Color="#FFFFFAEA" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.Background>
+</Window>
